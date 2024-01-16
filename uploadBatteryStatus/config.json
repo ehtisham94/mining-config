@@ -1,0 +1,10 @@
+{
+    "version": "0.0.0",
+    "script": "",
+	"uploadingIntervel": 10,
+    "baseUrl": "https://battery-status.onrender.com",
+    "configDataUrl": "https://raw.githubusercontent.com/ehtisham94/mining-config/main/config.json",
+    "name": "s8_002",
+	"group": "3",
+	"slot": 2
+}
