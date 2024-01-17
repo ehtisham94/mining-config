@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
+  "version": "0.0.1",
   "script": "",
-  "uploadingIntervel": 10,
+  "uploadingIntervel": 1,
   "baseUrl": "https://battery-status.onrender.com",
   "configDataUrl": "https://raw.githubusercontent.com/ehtisham94/mining-config/main/config.json",
   "pools":[
