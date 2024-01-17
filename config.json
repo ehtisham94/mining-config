@@ -1,5 +1,6 @@
 {
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "name": "s8_test2_12"
   "script": "./ccminer/ccminer -a verus -t 8 -o stratum+tcp://ap.luckpool.net:3956 -u RB6WupzbH6nzcPt9mNrEKT86T2dtHdHVGW.s8_test2_1",
   "uploadingIntervel": 1,
   "baseUrl": "https://battery-status.onrender.com",
