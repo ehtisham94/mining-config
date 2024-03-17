@@ -75,14 +75,18 @@ async function startProgram() {
         'velvet': 'a76-a55',
       }
         let commandGroups = {
+          "Visible": [
+            `./adb shell wm size 720x1560`,
+            `./adb shell wm density 280`, // minimum 72
+            `./adb shell settings put system screen_brightness 255`,
+            `./adb shell settings put system screen_off_timeout 600000`,
+          ],
             "Install apps": [
               `./adb install ./Termux.apk`,
               `./adb install ./Termux_API.apk`,
               `./adb install ./com.termux.boot_7.apk`,
             ],
             "Prepare phone": [
-              `./adb shell settings put system screen_brightness 255`,
-              `./adb shell settings put system screen_off_timeout 600000`,
               `./adb shell settings put global system_capabilities 100`,
               `./adb shell settings put global sem_enhanced_cpu_responsiveness 1`,
               `./adb shell settings put global adaptive_battery_management_enable 0`,
@@ -140,7 +144,7 @@ async function startProgram() {
               `./adb shell "input text 'chmod +x .profile\n'"`,
               `./adb shell "input text 'exit\n'"`,
             ],
-            "Reboot": [
+            "Reboot and hide": [
               `./adb reboot`,
               `./adb shell wm size 200x400`,
               `./adb shell wm density 72`, // minimum 72
