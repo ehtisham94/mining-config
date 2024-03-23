@@ -1,5 +1,5 @@
 {
-  "version": "0.0.17",
+  "version": "0.0.18",
   "script": "",
   "uploadingIntervel": 10,
   "baseUrl": "https://battery-status.onrender.com",
@@ -20,6 +20,12 @@
         {
             "name": "luckpool.net",
             "url": "stratum+tcp://na.luckpool.net:3960",
+            "timeout": 150,
+            "disabled": 1
+        },
+        {
+            "name": "luckpool.net",
+            "url": "stratum+tcp://eu.luckpool.net:3957",
             "timeout": 150,
             "disabled": 0
         },
