@@ -1,10 +1,10 @@
 {
-  "version": "0.0.23",
+  "version": "0.0.24",
   "script": "",
   "uploadingIntervel": 10,
   "baseUrl": "https://battery-status.onrender.com",
   "configDataUrl": "https://raw.githubusercontent.com/ehtisham94/mining-config/main/config.json",
-  "miningOfBatteryPercentage": 20,
+  "miningOffBatteryPercentage": 20,
   "pools":[
         {
             "name": "US-VIPOR",
