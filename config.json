@@ -1,5 +1,5 @@
 {
-  "version": "0.0.24",
+  "version": "0.0.23",
   "script": "",
   "uploadingIntervel": 10,
   "baseUrl": "https://battery-status.onrender.com",
