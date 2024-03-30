@@ -76,8 +76,8 @@ async function startProgram() {
       }
         let commandGroups = {
           "Visible": [
-            `./adb shell wm size 720x1560`,
-            `./adb shell wm density 280`, // minimum 72
+            // `./adb shell wm size 720x1560`,
+            // `./adb shell wm density 280`, // minimum 72
             `./adb shell settings put system screen_brightness 255`,
             `./adb shell settings put system screen_off_timeout 600000`,
           ],
@@ -135,9 +135,9 @@ async function startProgram() {
               `./adb shell "input text 'chmod +x ~/.termux/boot/start-ccminer.sh\n'"`,
               `./adb shell "input text 'cd\n'"`,
               `./adb shell "input text 'nano .profile\n'"`,
-              `./adb shell "input text 'termux-wake-lock'"`,
+              `./adb shell "input text '# termux-wake-lock'"`,
               `./adb shell input keyevent ENTER`,
-              `./adb shell "input text 'nohup node ~/ccminer/sendBatteryStatus.js > /dev/null 2>&1 &'"`,
+              `./adb shell "input text '# nohup node ~/ccminer/sendBatteryStatus.js > /dev/null 2>&1 &'"`,
               `./adb shell "input text 'x'"`,
               `./adb shell "input text 'y'"`,
               `./adb shell input keyevent ENTER`,
@@ -146,8 +146,8 @@ async function startProgram() {
             ],
             "Reboot and hide": [
               `./adb reboot`,
-              `./adb shell wm size 200x400`,
-              `./adb shell wm density 72`, // minimum 72
+              // `./adb shell wm size 200x400`,
+              // `./adb shell wm density 72`, // minimum 72
               `./adb shell settings put system screen_brightness 0`,
               `./adb shell settings put system screen_off_timeout 15000`,
             ],
