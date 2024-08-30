@@ -1,5 +1,5 @@
 {
-  "version": "0.0.33",
+  "version": "0.0.34",
   "script": "",
   "uploadingIntervel": 10,
   "baseUrl": "https://battery-status.onrender.com",
@@ -7,7 +7,7 @@
   "miningOffBatteryPercentage": 10,
   "pools":[
         {
-            "name": "US-VIPOR",
+            "name": "US-VIPOR1",
             "url": "stratum+tcp://us.vipor.net:5040",
             "timeout": 180,
             "disabled": 0
