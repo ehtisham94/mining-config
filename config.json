@@ -1,5 +1,5 @@
 {
-  "version": "0.0.29",
+  "version": "0.0.30",
   "script": "",
   "uploadingIntervel": 10,
   "baseUrl": "https://battery-status.onrender.com",
@@ -52,6 +52,14 @@
         {
             "name": "BTC (public-pool)",
             "url": "stratum+tcp://public-pool.io:21496",
+            "timeout": 600,
+            "disabled": 0,
+            "pass": "x",
+            "password": "x"
+        },
+        {
+            "name": "BTC (viabtc)",
+            "url": "stratum+tcp://bitcoin.viabtc.io:3333",
             "timeout": 600,
             "disabled": 0,
             "pass": "x",
