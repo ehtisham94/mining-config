@@ -53,7 +53,7 @@
             "name": "BTC (public-pool)",
             "url": "stratum+tcp://public-pool.io:21496",
             "timeout": 600,
-            "disabled": 0,
+            "disabled": 1,
             "pass": "x",
             "password": "x"
         },
