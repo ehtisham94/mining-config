@@ -69,7 +69,7 @@ async function startProgram() {
                 `./adb install ./com.termux.boot_7.apk`,
             ],
             "Install prerequisite for mining program" : [
-                `./adb shell "input text 'pkg install -y termux-api proot proot-distro\n'"`,
+                `./adb shell "input text 'pkg install -y termux-api proot proot-distro openssh\n'"`,
                 `./adb shell "input text 'proot-distro install ubuntu\n'"`,
                 `./adb shell "input text 'proot-distro login ubuntu\n'"`,
             ],
@@ -93,6 +93,8 @@ async function startProgram() {
                 `./adb shell "input text 'mkdir boot\n'"`,
                 `./adb shell "input text 'cd boot\n'"`,
                 `./adb shell "input text 'nano start-ubuntu.sh\n'"`,
+                `./adb shell "input text 'sshd'"`,
+                `./adb shell input keyevent ENTER`,
                 `./adb shell "input text 'termux-wake-lock'"`,
                 `./adb shell input keyevent ENTER`,
                 `./adb shell "input text 'proot-distro login ubuntu'"`,
