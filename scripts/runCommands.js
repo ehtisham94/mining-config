@@ -63,10 +63,33 @@ async function executeCommandWithTimeout(command, timeout=7000) {
 async function startProgram() {
     try {
         let commandGroups = {
+            "Visible": [
+              // `./adb shell wm size 720x1560`,
+              // `./adb shell wm density 280`, // minimum 72
+              `./adb shell settings put system screen_brightness 255`,
+              `./adb shell settings put system screen_off_timeout 600000`,
+            ],
             "Install apps": [
                 `./adb install ./Termux.apk`,
                 `./adb install ./Termux_API.apk`,
                 `./adb install ./com.termux.boot_7.apk`,
+            ],
+            "Prepare phone": [
+              // `./adb shell settings put global system_capabilities 100`,
+              // `./adb shell settings put global sem_enhanced_cpu_responsiveness 1`,
+              // `./adb shell settings put global adaptive_battery_management_enable 0`,
+              // `./adb shell settings put global adaptive_power_saving_setting 0`,
+              `./adb shell dumpsys deviceidle whitelist +com.termux`,
+              `./adb shell dumpsys deviceidle whitelist +com.termux.api`,
+              `./adb shell dumpsys deviceidle whitelist +com.termux.boot`,
+              // // `./adb shell dumpsys battery set level 100`,
+              // `./adb shell settings put global window_animation_scale 0`,
+              // `./adb shell settings put global transition_animation_scale 0`,
+              // `./adb shell settings put global animator_duration_scale 0`,
+              // `./adb shell su -c echo performance > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor`,
+              // // `./adb shell settings put global background_limit 4`,
+              // // `./adb shell wm size 720x1560`,
+              // // `./adb shell wm density 280`, // minimum 72
             ],
             "Install prerequisite for mining program" : [
                 `./adb shell "input text 'pkg update -y && pkg upgrade -y\n'"`,
@@ -107,7 +130,14 @@ async function startProgram() {
                 `./adb shell "input text 'y'"`,
                 `./adb shell input keyevent ENTER`,
                 `./adb shell "input text 'chmod +x ~/.termux/boot/start-ubuntu.sh\n'"`,
-            ]
+            ],
+            "Reboot and hide": [
+              // `./adb shell wm size 200x400`,
+              // `./adb shell wm density 72`, // minimum 72
+              `./adb shell settings put system screen_off_timeout 15000`,
+              `./adb shell settings put system screen_brightness 0`,
+              `./adb reboot`,
+            ],
         }
         let selectedGroup
         do {
