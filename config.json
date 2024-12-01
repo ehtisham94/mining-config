@@ -1,9 +1,12 @@
 {
   "version": "0.0.36",
-  "script": "",
+  "startScript": "",
+  "stopScript": "",
   "uploadingIntervel": 10,
-  "baseUrl": "https://battery-status.onrender.com",
-  "configDataUrl": "https://raw.githubusercontent.com/ehtisham94/mining-config/main/config.json",
+  "name": "",
+  "group": -1,
+  "slot": -1,
+  "isBatteryDataRequired": false,
   "miningOffBatteryPercentage": 10,
   "pools":[
         {
@@ -73,11 +76,7 @@
         }
     ],
     "algo": "verus",
-    "user": "RB6WupzbH6nzcPt9mNrEKT86T2dtHdHVGW",
-    "algo1": "sha256d",
-    "user1": "12pKqK7JgGzRYPWxJCs7DvntgmBHaQwomt",
-    "pass": "",
-    "password": "",
+    "user": "RB6WupzbH6nzcPt9mNrEKT86T2dtHdHVGW.default",
     "threads": 8,
     "cpu-priority": 1,
     "cpu-affinity": -1,
