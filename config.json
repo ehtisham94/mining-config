@@ -4,7 +4,7 @@
   "stopScript": "",
   "uploadingIntervel": 10,
   "name": "",
-  "group": -1,
+  "group": "",
   "slot": -1,
   "isBatteryDataRequired": false,
   "miningOffBatteryPercentage": 10,
