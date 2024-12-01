@@ -1,0 +1,87 @@
+{
+  "version": "0.0.36",
+  "script": "",
+  "uploadingIntervel": 10,
+  "baseUrl": "https://battery-status.onrender.com",
+  "configDataUrl": "https://raw.githubusercontent.com/ehtisham94/mining-config/main/config.json",
+  "miningOffBatteryPercentage": 10,
+  "pools":[
+        {
+            "name": "US-VIPOR",
+            "url": "stratum+tcp://us.vipor.net:5040",
+            "timeout": 180,
+            "disabled": 1
+        },
+        {
+            "name": "SG-VIPOR",
+            "url": "stratum+tcp://sg.vipor.net:5040",
+            "timeout": 180,
+            "disabled": 1
+        },
+        {
+            "name": "SG-VIPOR-SOLO",
+            "url": "stratum+tcp://sg.vipor.net:5045",
+            "timeout": 180,
+            "disabled": 0
+        },
+        {
+            "name": "FR-VIPOR",
+            "url": "stratum+tcp://fr.vipor.net:5040",
+            "timeout": 180,
+            "disabled": 1
+        },
+        {
+            "name": "luckpool.net",
+            "url": "stratum+tcp://na.luckpool.net:3960",
+            "timeout": 150,
+            "disabled": 1
+        },
+        {
+            "name": "luckpool.net",
+            "url": "stratum+tcp://eu.luckpool.net:3957",
+            "timeout": 150,
+            "disabled": 1
+        },
+        {
+            "name": "luckpool.net",
+            "url": "stratum+tcp://ap.luckpool.net:3956",
+            "timeout": 150,
+            "disabled": 1
+        },
+        {
+            "name": "verus.farm (Quipacorn)",
+            "url": "stratum+tcp://verus.farm:9999",
+            "timeout": 60,
+            "time-limit": 600,
+            "disabled": 1
+        },
+        {
+            "name": "BTC (public-pool)",
+            "url": "stratum+tcp://public-pool.io:21496",
+            "timeout": 600,
+            "disabled": 1,
+            "pass": "x",
+            "password": "x"
+        },
+        {
+            "name": "BTC (viabtc)",
+            "url": "stratum+tcp://bitcoin.viabtc.io:3333",
+            "timeout": 600,
+            "disabled": 1,
+            "pass": "x",
+            "password": "x"
+        }
+    ],
+    "algo": "verus",
+    "user": "RB6WupzbH6nzcPt9mNrEKT86T2dtHdHVGW",
+    "algo1": "sha256d",
+    "user1": "12pKqK7JgGzRYPWxJCs7DvntgmBHaQwomt",
+    "pass": "",
+    "password": "",
+    "threads": 8,
+    "cpu-priority": 1,
+    "cpu-affinity": -1,
+    "retry-pause": 5,
+    "api-allow": "192.168.0.0/16",
+    "api-bind": "0.0.0.0:4068"
+}
