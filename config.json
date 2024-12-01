@@ -2,7 +2,7 @@
   "version": "0.0.36",
   "startScript": "",
   "stopScript": "",
-  "uploadingIntervel": 10,
+  "uploadingInterval": 10,
   "name": "",
   "group": "",
   "slot": -1,
