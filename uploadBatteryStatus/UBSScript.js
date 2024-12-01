@@ -4,7 +4,7 @@ const fs = require('fs').promises;
 // const apiUrl = 'https://battery-status.onrender.com/segment'; // Replace with your API endpoint
 // const baseUrl = 'https://battery-status.onrender.com'; // Replace with your API endpoint
 
-// let uploadingIntervel = 10 // in minutes
+// let uploadingInterval = 10 // in minutes
 
 // const dataToSend = {
 //     version: "0.0.0",
@@ -24,7 +24,7 @@ let interval
 let configData = {
   version: '0.0.0',
   script: '',
-  uploadingIntervel: 10,
+  uploadingInterval: 10,
   baseUrl: 'https://battery-status.onrender.com',
   configDataUrl: 'https://raw.githubusercontent.com/ehtisham94/mining-config/main/config.json',
   name: '',
@@ -90,14 +90,14 @@ function startUploading() {
         batteryData.batteryHealth = batteryInfo.health
         uploadRequest()
       })
-  }, configData.uploadingIntervel * 60000);
+  }, configData.uploadingInterval * 60000);
 }
 
 async function startMining() {
   setTimeout(async () => {
     console.log('startMining');
     await executeCommand('pd login ubuntu')
-  }, configData.uploadingIntervel * 180000);
+  }, configData.uploadingInterval * 180000);
 }
 
 async function updateFile(filePath, stringData) {
