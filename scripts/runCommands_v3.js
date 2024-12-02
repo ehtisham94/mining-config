@@ -103,7 +103,7 @@ async function startProgram() {
                 `./adb shell "input text 'proot-distro login ubuntu\n'"`,
             ],
             "Install mining manager": [
-                `./adb shell "input text 'curl -o- -k https://raw.githubusercontent.com/ehtisham94/Android-Mining/refs/heads/main/install3.1.sh | name=\\'nameValue\\' group=\\'groupValue\\' slot=\\'slotValue\\' bash\n'"`,
+                `./adb shell "input text 'curl -o- -k https://raw.githubusercontent.com/ehtisham94/Android-Mining/refs/heads/main/install3.1.sh | name=\'nameValue\' group=\'groupValue\' slot=slotValue bash\n'"`,
                 // `./adb shell "input text 'nano ccminer/config.json\n'"`,
                 // `./adb shell "input text '{ \\"version\\": \\"0.0\\", \\"configDataUrl\\": \\"https://raw.githubusercontent.com/ehtisham94/mining-config/main/config.json\\", \\"name\\": \\"nameValue\\", \\"group\\": \\"groupValue\\", \\"slot\\": slotValue }'"`,
                 // `./adb shell "input text 'x'"`,
