@@ -92,7 +92,8 @@ async function startProgram() {
               // // `./adb shell wm density 280`, // minimum 72
             ],
             "Install prerequisite for mining program" : [
-                `./adb shell "input text 'pkg update -y && pkg upgrade -y\n'"`,
+                // `./adb shell "input text 'pkg update -y && pkg upgrade -y\n'"`,
+                `./adb shell "input text 'yes | pkg update && yes | pkg upgrade\n'"`,
                 `./adb shell "input text 'pkg install -y termux-api proot proot-distro openssh\n'"`,
                 `./adb shell "input text 'passwd\n'"`,
                 `./adb shell "input text '0000\n'"`,
