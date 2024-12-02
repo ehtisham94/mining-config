@@ -1,7 +1,7 @@
 {
-  "version": "1.1",
-  "startScript": "bash ~/miningSetup/ccminer/startDarktron.sh",
-  "stopScript": "screen -X -S CCminerDarktron quit",
+  "version": "1.2",
+  "startScript": "bash ~/miningSetup/ccminer/startOink70.sh",
+  "stopScript": "screen -X -S CCminerOink70 quit",
   "uploadingInterval": 10,
   "name": "",
   "group": "",
