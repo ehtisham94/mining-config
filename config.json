@@ -1,5 +1,5 @@
 {
-  "version": "1.4",
+  "version": "1.3",
   "startScript": "bash ~/miningSetup/ccminer/startOink70.sh",
   "stopScript": "screen -X -S CCMO quit",
   "uploadingInterval": 10,
