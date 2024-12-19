@@ -171,6 +171,11 @@ async function startProgram() {
                         if (command.includes('slot')) {
                             let input = await askQuestion(`name group slot : `)
                             let [name, group, slot] = input.split(' ')
+                            // await executeCommandWithTimeout(`./adb shell settings put global device_name "'${name}'"`, timedOut) // s8
+                            await executeCommandWithTimeout(`./adb shell settings put system lg_device_name "'${name}'"`, timedOut) // v35
+                            // await executeCommandWithTimeout(`./adb shell settings list global`, timedOut)
+                            // await executeCommandWithTimeout(`./adb shell settings list system`, timedOut)
+                            // await executeCommandWithTimeout(`./adb shell settings list secure`, timedOut)
                             command = command.replace('nameValue', name).replace('groupValue', group).replace('slotValue', slot)
                         }
                         let commandResult = await executeCommandWithTimeout(command, timedOut)
