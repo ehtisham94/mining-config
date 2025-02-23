@@ -131,9 +131,9 @@ async function startProgram() {
               // // `adb shell wm density 280`, // minimum 72
             ],
             "Install prerequisite for mining program" : [
-                `adb shell cmd wifi add-network "A101" wpa2 "Aa1!1!1aA" -h`,
-                `adb shell "input text 'A101'"`,
-                `adb shell "input text 'Aa1!1!1aA'"`,
+                `adb shell cmd wifi add-network "D101" wpa2 "Aa1!4!1aA" -h`,
+                `adb shell "input text 'D101'"`,
+                `adb shell "input text 'Aa1!4!1aA'"`,
                 // `adb shell "input text 'pkg update -y && pkg upgrade -y\n'"`,
                 `adb shell "input text 'yes | pkg update && yes | pkg upgrade\n'"`,
                 `adb shell "input text 'pkg install -y termux-api proot proot-distro openssh\n'"`,
@@ -207,6 +207,7 @@ async function startProgram() {
             }
             let commandPrefix = await askQuestion(`Please type command prefix : `)
             if (!!commandPrefix) commands = commands.map(c => `${commandPrefix}${c}`)
+            else commands = commands.map(c => c.replace(`\n'"`, `'" & adb shell input keyevent 66`))
             if (!!commandGroups[selectedGroup] || selectedGroup == 'All') {
                 let repeat
                 do {
@@ -216,17 +217,20 @@ async function startProgram() {
                     for (let i = 0; i < commands.length; i++) {
                         let command = commands[i], timedOut = command.includes('.apk') ? 60000 : 7000
                         if (command.includes('slot')) {
-                            let input = await askQuestion(`name group slot : `)
-                            let [name, group, slot] = input.split(' ')
-                            // await executeCommandWithTimeout(`adb shell settings put global device_name "'${name}'"`, timedOut) // s8
-                            await executeCommandWithTimeout(`adb shell settings put system lg_device_name "'${name}'"`, timedOut) // v35
+                            let name = await askQuestion(`name group slot : `)
+                            let [_, num] = name.split('_')
+                            num = parseInt(num)
+                            let group = `00${parseInt(num / 8) + 1}`.slice(-3), slot = num % 8
+                            // let [name, group, slot] = name.split(' ')
+                            await executeCommandWithTimeout(`adb shell settings put global device_name "'${name}'"`, timedOut) // s8
+                            // await executeCommandWithTimeout(`adb shell settings put system lg_device_name "'${name}'"`, timedOut) // v35
                             // await executeCommandWithTimeout(`adb shell settings list global`, timedOut)
                             // await executeCommandWithTimeout(`adb shell settings list system`, timedOut)
                             // await executeCommandWithTimeout(`adb shell settings list secure`, timedOut)
                             command = command.replace('nameValue', name).replace('groupValue', group).replace('slotValue', slot)
                         }
                         let commandResult = await executeCommandWithTimeout(command, timedOut)
-                        let next = parseInt(await askQuestion(`'${command}' executed ${commandResult.success ? 'successfully' : 'with error'}. next : `))
+                        let next = parseInt(await askQuestion(`\n'${command}' executed ${commandResult.success ? 'successfully' : 'with error'}.\nnext '${commands[i+1]}' : `))
                         if (parseInt(next)) {
                             i += parseInt(next)
                         }
